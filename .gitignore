@@ -1,0 +1,35 @@
+# Credenciais e segredos — NUNCA commitar
+.env
+.env.*
+!.env.example
+*.token
+secrets/
+credentials*.json
+
+# Config local do Claude Code
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Build / temporários
+dist/
+build/
+*.log
+tmp/
