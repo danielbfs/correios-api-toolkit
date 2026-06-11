@@ -10,6 +10,11 @@ Specs extraídos do ambiente de **homologação** (`apihom.correios.com.br`).
 | [api-correios-token.md](./api-correios-token.md) | `token` | 1.21.13 | **Autenticação** — gera o Bearer token usado por todas as outras APIs |
 | [api-correios-rastreamento.md](./api-correios-rastreamento.md) | `srorastro` (SRO - Rastro) | 3.5.38 | **Rastreamento** — eventos de objetos, AR digital, imagens de baixa |
 | [api-correios-preco-prazo.md](./api-correios-preco-prazo.md) | `preco` + `prazo` | 3.18.15 / 3.9.26 | **Preço e Prazo** — cotação e prazo de entrega (nacional/internacional) |
+| [api-correios-cep.md](./api-correios-cep.md) | `cep` | 3.13.16 | **CEP / Endereços** — busca de endereço, localidades, bairros, faixas de CEP |
+| [api-correios-prepostagem.md](./api-correios-prepostagem.md) | `prepostagem` | 2.0.32 | **Pré-Postagem** — preparar envios, rótulos/etiquetas, declaração de conteúdo |
+| [api-correios-coleta.md](./api-correios-coleta.md) | `coleta` | 1.0.6 | **Coleta** — solicitação e gestão de coletas/retiradas |
+| [api-correios-locker.md](./api-correios-locker.md) | `locker` | 1.3.43 | **Locker** — armários inteligentes (parceiros credenciados) |
+| [api-correios-ster.md](./api-correios-ster.md) | STER (serviceId 288) | — | **STER** — registro de atendimentos por contratados (nicho; ponteiro, sem api-docs) |
 
 ## Fluxo geral de uso
 
@@ -41,8 +46,9 @@ Há **dois hosts com papéis diferentes** — não confunda:
 | Homologação (testes) | `https://cwshom.correios.com.br` | `https://apihom.correios.com.br` |
 | Produção | `https://cws.correios.com.br` | `https://api.correios.com.br` |
 
-Os caminhos por serviço no gateway são `/token`, `/srorastro`, `/preco` e `/prazo`.
-Para produção, troque apenas o host (`apihom` → `api`).
+Os caminhos por serviço no gateway são `/token`, `/srorastro`, `/preco`, `/prazo`,
+`/cep`, `/prepostagem`, `/coleta` e `/locker`. Para produção, troque apenas o host
+(`apihom` → `api`).
 
 ---
 

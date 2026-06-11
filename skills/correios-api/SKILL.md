@@ -5,8 +5,8 @@ description: Connect to the Brazilian Correios REST APIs (api.correios.com.br). 
 
 # Correios API integration
 
-Helps connect to the Brazilian postal service (Correios) REST APIs. There are four
-services, all on the same host:
+Helps connect to the Brazilian postal service (Correios) REST APIs. The services all
+share the same gateway host:
 
 | Service | Path | Purpose |
 |---------|------|---------|
@@ -14,6 +14,16 @@ services, all on the same host:
 | SRO - Rastro | `/srorastro` | Package tracking (events, AR digital, images) |
 | Preço | `/preco` | Shipping price / freight quote |
 | Prazo | `/prazo` | Delivery deadline |
+| CEP | `/cep` | Address lookup, localities, neighborhoods, CEP ranges |
+| Pré-Postagem | `/prepostagem` | Prepare shipments, labels, content declaration |
+| Coleta | `/coleta` | Pickup/collection requests |
+| Locker | `/locker` | Smart lockers (credentialed partners) |
+| STER | (serviceId 288) | Third-party service registration (niche; no public api-docs) |
+
+The reference files (`reference/`) cover the core four (token, tracking, price, deadline)
+in depth. For CEP, pré-postagem, coleta, locker and STER, see the project docs at
+`docs/api-correios-*.md`. The Python/Node clients implement the core four; extend them
+for the others following the same pattern.
 
 ## Prerequisites (the user must have these)
 

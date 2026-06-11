@@ -17,7 +17,7 @@ dos Correios** (Brasil): autenticação (token), rastreamento, preço (frete) e 
 
 | Caminho | Conteúdo |
 |---------|----------|
-| [`docs/`](./docs/) | Documentação dos serviços: [token](./docs/api-correios-token.md), [rastreamento](./docs/api-correios-rastreamento.md), [preço/prazo](./docs/api-correios-preco-prazo.md) e o [índice](./docs/README.md) |
+| [`docs/`](./docs/) | Documentação dos serviços: [token](./docs/api-correios-token.md), [rastreamento](./docs/api-correios-rastreamento.md), [preço/prazo](./docs/api-correios-preco-prazo.md), [CEP](./docs/api-correios-cep.md), [pré-postagem](./docs/api-correios-prepostagem.md), [coleta](./docs/api-correios-coleta.md), [locker](./docs/api-correios-locker.md), [STER](./docs/api-correios-ster.md) e o [índice](./docs/README.md) |
 | [`skills/correios-api/`](./skills/correios-api/) | Skill para Claude Code + **clientes** Python e Node sem dependências |
 | `.env.example` | Modelo de variáveis de ambiente para as credenciais |
 
@@ -29,6 +29,10 @@ dos Correios** (Brasil): autenticação (token), rastreamento, preço (frete) e 
 | SRO - Rastro | `/srorastro` | Rastreamento de objetos |
 | Preço | `/preco` | Cálculo de preço / frete |
 | Prazo | `/prazo` | Prazo de entrega |
+| CEP | `/cep` | Busca de endereço, localidades e faixas de CEP |
+| Pré-Postagem | `/prepostagem` | Preparar envios, rótulos/etiquetas, declaração de conteúdo |
+| Coleta | `/coleta` | Solicitação e gestão de coletas |
+| Locker | `/locker` | Armários inteligentes (parceiros credenciados) |
 
 ## Pré-requisitos
 
