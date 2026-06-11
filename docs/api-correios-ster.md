@@ -37,10 +37,24 @@ pontos de atendimento (e gerar protocolo). Usado por:
 - A documentação oficial referencia os hosts do **portal** (`cws`/`cwshom`); as chamadas
   REST seguem o padrão do **gateway** (`api`/`apihom`).
 
-## Observação
+## Onde obter os dados de conexão
 
-> O `api-docs` (OpenAPI) deste serviço **não respondeu** no caminho padrão
-> `…/ster/v3/api-docs` (HTTP 404) no momento da extração. Os detalhes acima vêm da
-> página oficial de padrões técnicos, não do spec OpenAPI. Schemas de request/response
-> devem ser confirmados no manual do STER no portal do desenvolvedor. Considere este
-> documento um **ponteiro**, não uma referência completa.
+Este documento é um **ponteiro**: o STER não expôs `api-docs` OpenAPI no caminho padrão
+(`…/ster/v3/api-docs` retornou **HTTP 404**). Para obter os dados completos de conexão
+(schemas de request/response, parâmetros, credenciais e fluxo de integração), use as
+fontes oficiais:
+
+1. **Página de padrões técnicos (STER):**
+   https://www.correios.com.br/atendimento/developers/padroes-tecnicos-de-comunicacao-ster
+   — descrição, modelos de integração e manual para download.
+2. **Portal do desenvolvedor (CWS):** https://cws.correios.com.br (produção) /
+   https://cwshom.correios.com.br (homologação) — exige login Meu Correios. É onde ficam
+   o manual do STER, o `serviceId 288` e a liberação de acesso à API.
+3. **Hub de developers dos Correios:**
+   https://www.correios.com.br/atendimento/developers — índice geral das APIs e manuais.
+4. **Suporte/credenciamento:** como o STER é destinado a **contratados/parceiros**, o
+   acesso costuma depender de credenciamento — trate via canais de atendimento a
+   empresas dos Correios / gestor do contrato.
+
+> Os detalhes deste arquivo vêm da página oficial de padrões técnicos, **não** de um
+> spec OpenAPI. Confirme os schemas no manual do STER antes de implementar.
